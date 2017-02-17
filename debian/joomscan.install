@@ -1,0 +1,5 @@
+*.txt usr/share/joomscan/
+*.pl usr/share/joomscan/
+report usr/share/joomscan/
+debian/helper-script/joomscan usr/bin/
+doc/AGREEMENT usr/share/joomscan/doc/

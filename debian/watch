@@ -1,0 +1,6 @@
+version=3
+
+# This is a working entry but it is disabled because upstream
+# does not use proper version numbers for their files.
+
+# http://sf.net/joomscan/joomscan-(.*)\.zip

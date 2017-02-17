@@ -1,0 +1,21 @@
+Source: joomscan
+Section: utils
+Priority: extra
+Maintainer: Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: https://www.owasp.org/index.php/Category:OWASP_Joomla_Vulnerability_Scanner_Project
+Vcs-Git: https://github.com/parrotsec/joomscan
+Vcs-Browser: https://github.com/parrotsec/joomscan
+
+Package: joomscan
+Architecture: all
+Depends: ${misc:Depends}, perl, libwww-mechanize-perl, libdigest-md5-file-perl, libswitch-perl
+Description: OWASP Joomla Vulnerability Scanner Project
+ Joomla! is probably the most widely-used CMS out there due 
+ to its flexibility, user-friendlinesss, extensibility to 
+ name a few.So, watching its vulnerabilities and adding such 
+ vulnerabilities as KB to Joomla scanner takes ongoing 
+ activity.It will help web developers and web masters to 
+ help identify possible security weaknesses on their 
+ deployed Joomla! sites.

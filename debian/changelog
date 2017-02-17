@@ -1,0 +1,17 @@
+joomscan (0.0.4-1parrot) testing; urgency=medium
+
+  * Add libswitch-perl dependency
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 17 Feb 2017 22:09:32 +0100
+
+joomscan (0.0.4-1kali1) kali; urgency=low
+
+  * Fixed an error in the helper script
+
+ -- Devon Kearns <dookie@kali.org>  Tue, 19 Mar 2013 15:05:11 -0600
+
+joomscan (0.0.4-1kali0) kali; urgency=low
+
+  * Initial release 
+
+ -- Devon Kearns <dookie@kali.org>  Thu, 17 Jan 2013 14:21:28 -0700

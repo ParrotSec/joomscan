@@ -115,7 +115,7 @@ OWASP Joomla! Vulnerability Scanner End-User License Agreement!
     Thank you.
 
 Please wait ...\n"};
-        open(AG,'>/usr/share/joomscan/doc/AGREEMENT')|| die("$!");
+        open(AG,'>doc/AGREEMENT')|| die("$!");
         print AG "ATTENTION:\nYou have signed agreement for legal use on the OWASP Vulnerability Scanner.";
         close (AG);        
         sleep(5);
@@ -123,13 +123,13 @@ Please wait ...\n"};
         
     }else{exit 99;} undef($inp);
 }
-open(AG,'/usr/share/joomscan/doc/AGREEMENT') || make_agree();
+open(AG,'doc/AGREEMENT') || make_agree();
 close(AG);
 ####### [/Sign Agreement] ######
 ####### [Force Upgrade] ######
 use DirHandle;
 
-my $dir_check = new DirHandle "/usr/share/joomscan/report/assets";
+my $dir_check = new DirHandle "report/assets";
 if (!defined $dir_check)
 {
     print qq{
@@ -146,7 +146,7 @@ if (!defined $dir_check)
    else
    {    
      system("mkdir report");
-     print "[!] Please find reports under /usr/share/joomscan/report/ directory.\n"
+     print "[!] Please find reports under report/ directory.\n"
    }
    undef $uans;
 }
@@ -177,7 +177,7 @@ $urlfile .= '-joexploit.htm';
 $txtfile =  $urlfile;
 $urlfile = 'report/'.$urlfile;
 $txtfile =~ s/\.htm/\.txt/i;
-$txtfile = '/usr/share/joomscan/report/'.$txtfile;
+$txtfile = 'report/'.$txtfile;
 $outfile = ($args{o} && $args{o} eq 't')?$txtfile:$urlfile;
 
 my $ua = LWP::UserAgent->new('requests_redirectable'=>['GET','POST']);
@@ -2454,9 +2454,9 @@ sub get_chart_height
 sub doc_read
 {
     my $f = shift;$f = uc($f);    
-    open(RE,'/usr/share/joomscan/doc/'.$f) || die ("There is no such doc available. Maybe you removed it or use older version of the scanner. Use joomscan.pl download to download new package. Error Message:  $!");
+    open(RE,'doc/'.$f) || die ("There is no such doc available. Maybe you removed it or use older version of the scanner. Use joomscan.pl download to download new package. Error Message:  $!");
     close(RE);
-    if ($^O =~ /Win/) {system("more doc\\".$f);}else{system("more /usr/share/joomscan/doc/".$f);}    
+    if ($^O =~ /Win/) {system("more doc\\".$f);}else{system("more doc/".$f);}    
     exit;
 }
 sub usage {
